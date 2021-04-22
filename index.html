@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/normalize.min.css">
+    <link rel="stylesheet" href="style/reset.min.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/media.css">
     <title>Bhost</title>
 </head>
 
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <div class="header__arrow">
             <i class="fas fa-chevron-left"></i>
             <i class="fas fa-chevron-right"></i>
@@ -70,7 +71,6 @@
             </div>
         </div>
     </header>
-
     <section class="about">
         <div class="container">
             <div class="about__content">
@@ -117,7 +117,6 @@
             <img src="images/aboutmain.jpg" alt="aboutus">
         </div>
     </section>
-
     <section class="domain">
         <h2>FIND YOUR DOMAIN NAME</h2>
         <p>Starting From $1.75 Per Year!</p>
@@ -131,28 +130,27 @@
             <input type="checkbox" class="domain__check" id="edu"><label for="edu">.edu / $2</label>
         </form>
     </section>
-
-    <section class="howto">
+    <section class="howToChoose">
         <div class="container">
-            <div class="howto__intro">
+            <div class="howToChoose__intro">
                 <h2>HOW TO BUILD YOUR WEBSITE?</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores architecto magnam voluptatum
                     repudiandae, fugit facere facilis sint commodi.</p>
             </div>
-            <div class="howto__steps">
-                <div class="howto__step">
+            <div class="howToChoose__steps">
+                <div class="howToChoose__step">
                     <img src="images/num1.png" alt="num">
                     <h3>DOMAIN</h3>
                     <p>Find the Perfect web Hosting Package for You, best hosting services. Join now and get free
                         domain!</p>
                 </div>
-                <div class="howto__step">
+                <div class="howToChoose__step">
                     <img src="images/num2.png" alt="num">
                     <h3>HOSTING</h3>
                     <p>Website hosting services are basically the plot of internet land that your website storefront
                         sits on.</p>
                 </div>
-                <div class="howto__step">
+                <div class="howToChoose__step">
                     <img src="images/num3.png" alt="num">
                     <h3>WEBSITE</h3>
                     <p>Customers can access and see it when they type your url. Different types of hosting services that
@@ -161,7 +159,6 @@
             </div>
         </div>
     </section>
-
     <section class="service">
         <div class="container">
             <div class="service__intro">
@@ -197,7 +194,6 @@
             </div>
         </div>
     </section>
-
     <section class="price">
         <div class="container">
             <div class="price__intro">
@@ -206,15 +202,94 @@
                     best web hosting services. Join Bhost now and get a free domain name!</p>
             </div>
             <div class="price__slider">
-                <h4>STARTUP HOSTING PACKAGE</h4>
-                <img src="images/price.png" alt="pricecloud">
-                <p>Find the Perfect HOsting Package for You,
-                    Get the Best WEb Hosting Deals Today! Bhost is one of the best web hosting services. Join world best
-                    hosting Bhost now and get a free domain name!
-                </p>
-                <button>GET STARTED</button>
-                <img src="images/pricedevices.png" alt="pricedevices">
+                <div class="price__slider-arrows">
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+                <div class="price__slider-inner">
+                    <div class="price__slider-content">
+                        <h4>STARTUP HOSTING PACKAGE</h4>
+                        <img src="images/price.png" alt="pricecloud">
+                        <div class="price__check">
+                            <i class="fas fa-check"></i><span>1 Website</span><br>
+                            <i class="fas fa-check"></i><span>Unlimited Bandwidth</span><br>
+                            <i class="fas fa-check"></i><span>Free Domain</span><br>
+                            <i class="fas fa-check"></i><span>100 GB Storage</span><br>
+                            <i class="fas fa-check"></i><span>For up to 10 Users</span><br>
+                            <i class="fas fa-check"></i><span>Free Domain</span><br>
+                        </div>
+                        <p>Find the Perfect Hosting Package for You,
+                            Get the Best WEb Hosting Deals Today! Bhost is one of the best web hosting services. Join
+                            world
+                            best
+                            hosting Bhost now and get a free domain name!
+                        </p>
+                        <button class="price__button">GET STARTED</button>
+                    </div>
+                    <div class="price__slider-pic">
+                        <img src="images/pricedevices.png" alt="pricedevices">
+                    </div>
+                </div>
+                <div class="price__slider-nav">
+                    <div class="price__slider-point"></div>
+                    <div class="price__slider-point"></div>
+                    <div class="price__slider-point"></div>
+                </div>
             </div>
+        </div>
+    </section> -->
+
+    <section class="builder">
+        <img class="builder__pic" src="images/builder.jpg" alt="builerpic">
+        <div class="builder__content">
+            <h3 class="builder__content-header">WEB SITE BUILDER</h3>
+            <p class="builder__content-text">Website hosting services are basically the plot of internet land that your
+                website storefront sits on. If
+                you have a website, it need to be on the web, these hosting services are landlords that put up your site
+                and keep it running.</p>
+            <p class="builder__content-text">So your customer can access and see it when they type in your url. There
+                are different types of hosting
+                services that carter to varying types of businesses.</p>
+        </div>
+    </section>
+
+    <section class="howToChoose">
+        <div class="howToChoose__container container">
+            <h3>HOW TO CHOOSE THE BEST WEB HOSTING COMPANY?</h3>
+            <div class="howToChoose__tabs">
+                <!-- Items -->
+                <div class="howToChoose__tabs-item howToChoose__tabs-item_active">BANDWIDTH</div>
+                <div class="howToChoose__tabs-item">COMPATIBILITY</div>
+                <div class="howToChoose__tabs-item">RELIABILITY</div>
+                <div class="howToChoose__tabs-item">SECURITY</div>
+                <div class="howToChoose__tabs-item">SHARED</div>
+                <div class="howToChoose__tabs-item">LOAD TIME</div>
+            </div>
+            <!-- Content -->
+            <div class="howToChoose__tabs-content">
+                <h4>The First Thing You Need!</h4>
+                <p><img src="images/howto.png" alt="spaceship">
+                    Welcome to WHMCS! You have made great choice and we want to help you get up a running as quickly
+                    as possible. This is a sample announcement. Announcements are a ways to keep your customers
+                    informed about news and special offers.
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, officiis. Omnis maiores
+                    deserunt sint dignissimos nobis minus amet libero doloribus atque. Similique voluptatem vitae
+                    labore aperiam et impedit numquam asperiores, cupiditate placeat vero ad adipisci ipsa, optio
+                    veniam? Iusto, voluptates.
+                    <br><br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis tempora tenetur delectus
+                    sed
+                    dolores nam perspiciatis, dolorem cum maiores dignissimos laboriosam aliquam culpa, harum, ad
+                    facere. Cumque placeat temporibus pariatur?
+
+                </p>
+            </div>
+            <!-- <div class="howToChoose__tabs-content"></div>
+            <div class="howToChoose__tabs-content"></div>
+            <div class="howToChoose__tabs-content"></div>
+            <div class="howToChoose__tabs-content"></div>
+            <div class="howToChoose__tabs-content"></div> -->
         </div>
     </section>
 

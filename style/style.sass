@@ -1,9 +1,9 @@
-@import "fonts.css"
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap')
+@import "mixins.sass"
 $blue: #00aeef
 $violet: #9655c7
 $gray: #616161
-$linear: linear-gradient(45deg, $blue 10%, 40%, $violet 60%)
+$gradient: linear-gradient(45deg, $blue 10%, 40%, $violet 60%)
 
 body
     font-family: "Open Sans", sans-serif
@@ -11,21 +11,16 @@ body
     line-height: 27px
     color: #616161
 
-h1,h2,h3,h4
-    color: black
-    margin-bottom: 25px
-
-h2
-    font-size: 36px
-h3
-    font-size: 30px
-h4
-    font-size: 18px
-
 hr
     background-color: rgba(255, 255, 255, 0.3)
     height: 1px
     border: none
+
+img
+    max-width: 100%
+    max-height: 100%
+    object-fit: cover
+    object-position: 0 0
 
 .container
     margin: 0 auto
@@ -172,7 +167,7 @@ hr
         right: 7px
         width: 130px
         height: 45px
-        background: $linear
+        background: $gradient
         border-radius: 30px
         font-weight: 600
     input[type="checkbox"]
@@ -225,10 +220,126 @@ hr
         &:not(:last-child)
             border-right: 1px dashed $blue
         i
-            background: $linear
+            background: $gradient
             -webkit-background-clip: text
             -webkit-text-fill-color: transparent
             font-size: 50px
         h4
             font-weight: normal
             margin: 20px 0 10px 0
+
+.price
+    &__slider-arrows
+        i
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            &:first-child
+                left: -80px
+            &:last-child
+                right: -80px
+    &__intro
+        margin: 0 auto
+        text-align: center
+        max-width: 58%
+    &__slider
+        border: 1px solid black
+        position: relative
+    &__slider-content
+        max-width: 50%
+        img
+            float: left
+    &__slider-inner
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+    &__check
+        max-width: 50%
+        display: flex
+        flex-direction: row
+        justify-content: space-evenly
+        align-items: center
+        flex-wrap: wrap
+    &__button
+        color: $blue
+        background-color: transparent
+        border: 2px solid $blue
+        border-radius: 5px
+        padding: 16px 25px
+        font-size: 20px
+    &__slider-nav
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 72px
+    &__slider-point
+        width: 14px
+        height: 14px
+        border: 2px solid $blue
+        cursor: pointer
+
+//BUILDER>>>
+
+.builder
+    color: #fff
+    display: flex
+    flex-direction: row
+    &__pic
+        width: 50%
+    &__content
+        max-height: 100%
+        flex: 0 1 50%
+        background: $gradient
+        padding: 83px 5.5%
+        &-header
+            font-size: 30px
+            margin-bottom: 27px
+            font-weight: 700
+            line-height: 30px
+        &-text
+            margin-top: 22px
+            max-width: 60%
+
+//HOWTO>>>
+
+.howToChoose
+    pading: 120px 0
+    color: #333333
+    &__container
+        max-width: 1080px
+    h3
+        text-align: center
+        font-size: 30px
+        font-weight: 700
+        line-height: 34px
+    &__tabs
+        margin: 74px auto 50px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap
+    &__tabs-item
+        cursor: pointer
+        display: inline-block
+        height: 60px
+        flex: 0 1 16.5%
+        background-color: #f9f9f9
+        border-radius: 2px
+        cursor: pointer
+        text-align: center
+        font-weight: 600
+        padding: 16px 0
+        &_active
+            background: $gradient
+            color: white
+    &__tabs-content
+        h4
+            font-size: 20px
+            font-weight: 600
+        p
+            margin-top: 22px
+        img
+            float: right
+            padding: 50px

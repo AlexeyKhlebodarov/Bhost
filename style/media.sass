@@ -1,0 +1,26 @@
+@import "mixins.sass"
+
+.builder
+    @include tablets
+        flex-direction: column
+        text-align: center
+    &__content-text
+        @include lgdesktop
+            max-width: 100%
+    &__pic
+        @include tablets
+            width: 100%
+
+.howToChoose
+    &__tabs-item
+        @include laptop
+            flex: 0 1 33%
+            margin-top: 5px
+        @include phones
+            flex: 0 1 49%
+    &__tabs-content
+        @include phones
+            text-align: center
+        img
+            @include smtablets
+                width: 100%
