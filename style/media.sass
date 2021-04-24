@@ -24,3 +24,34 @@
         img
             @include smtablets
                 width: 100%
+
+.stat
+    &__items
+        @include smtablets
+            height: 50%
+            justify-content: center
+            align-content: space-between
+    &__item
+        @include smtablets
+            flex: 0 0 50%
+            align-self: start
+    &__num
+        @include smtablets
+            margin: 5px 0 0
+
+.blog
+    &__item
+        @include tablets
+            flex: 0 1 49%
+        @include phones
+            flex: 0 1 100%
+    &__button
+        @include desktop
+            display: block
+            margin-bottom: 10px
+            width: 100%
+
+.faq
+    &__content
+        @include phones
+            flex-direction: column

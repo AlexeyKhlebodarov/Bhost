@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap')
 @import "mixins.sass"
-$blue: #00aeef
-$violet: #9655c7
+$blue: #31aae2
+$violet: #9d35c0
 $gray: #616161
-$gradient: linear-gradient(45deg, $blue 10%, 40%, $violet 60%)
+$gradient: linear-gradient(45deg, $blue 0, $violet 100%)
 
 body
     font-family: "Open Sans", sans-serif
@@ -23,9 +23,11 @@ img
     object-position: 0 0
 
 .container
+    max-width: 1200px
     margin: 0 auto
-    padding: 120px 15px
-    max-width: 1170px
+    padding: 0 15px
+    &_Y
+        padding: 120px 15px
 
 .header
     width: 100%
@@ -104,10 +106,6 @@ img
             font-weight: 400
 
 .about
-    .container
-        display: flex
-        justify-content: space-between
-        align-items: center
     &__content
         max-width: 540px
         h3
@@ -185,7 +183,7 @@ img
                 top: 2px
                 cursor: pointer
 
-.howto
+.howToBuild
     text-align: center
     &__intro
         max-width: 40vw
@@ -305,7 +303,6 @@ img
 //HOWTO>>>
 
 .howToChoose
-    pading: 120px 0
     color: #333333
     &__container
         max-width: 1080px
@@ -343,3 +340,197 @@ img
         img
             float: right
             padding: 50px
+
+//STAT>>>
+
+.stat
+    height: 540px
+    display: flex
+    align-items: center
+    background: url(../images/stat.jpg) center/cover fixed
+    color: #fff
+    text-align: center
+    &__items
+        width: 80%
+        margin: 0 auto
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+    &__item
+        flex: 1 0 25%
+    &__num
+        margin: 34px 0 29px 0
+        font-size: calc(30px + 5 * (100vw / 1170))
+    &__text
+        font-size: calc(15px + 4 * (100vw / 1170))
+
+//CLIENTS>>>
+
+.clients
+    text-align: center
+    &__header
+        color: #333
+        font-size: 30px
+        margin-bottom: 75px
+        font-weight: 600
+    &__carousel
+        // position: relative
+        height: 360px
+        width: 100%
+        background: url(../images/clients.png) center/cover fixed
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        p
+            max-width: 60%
+        img
+            &:first-child
+                align-self: flex-end
+    &__carousel-dots
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        max-width: 82px
+        margin: 0 auto
+    &__carousel-dot
+        display: inline-block
+        width: 14px
+        height: 14px
+        border: 1px dotted black
+        border-radius: 10px
+        &_active
+            background-image: $gradient
+            width: 20px
+            height: 20px
+
+//BLOG>>>
+
+.blog
+    background-color: #f9f9f9
+    &__items
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+    &__item
+        flex: 0 1 31.5%
+        margin-bottom: 10px
+    &__pic
+        position: relative
+        img
+            width: 100%
+    &__date
+        padding: 6px 15px
+        background-color: #00aeef
+        color: #fff
+        max-width: 80px
+        border-radius: 3px
+        position: absolute
+        left: 19px
+        bottom: 15px
+        &_active
+            background: $gradient
+            color: white
+    &__content
+        padding: 27px 42px 30px 25px
+        background-color: #fff
+        h4
+            color: #616161
+        h3
+            color: #333333
+            font-size: 18px
+            font-weight: 600
+            margin-bottom: 14px
+        hr
+            height: 1 px
+            width: 90%
+            background-color: #ededed
+        p
+            margin: 17px 0 25px 0
+        i
+            color: #333
+    &__button, &__comments, &__share
+        display: inline-block
+        background-color: #f9f9f9
+        border-radius: 2px
+    &__button
+        color: #00aeef
+        padding: 6px 20px
+        font-weight: 600
+        margin-right: 50px
+        &_active
+            background: $gradient
+            color: white
+    &__comments
+        padding: 3px 8px 2.5px 11px
+        max-width: 80%
+    &__share
+        padding: 3px 11px 2.5px 12px
+        margin: 0 5px
+
+//FAQ>>>
+
+.faq
+    &__container
+        max-width: 970px
+        margin: 0 auto
+        h2
+            color: #333333
+            font-size: 29px
+            font-weight: 700
+            margin-bottom: 70px
+    &__content
+        display: flex
+        justify-content: space-between
+    &__categories
+        display: flex
+        flex-direction: column
+        min-width: 160px
+        margin: 0 25px 25px 0
+        h4
+            color: #033333
+            font-size: 16px
+            font-weight: 600
+            margin-bottom: 15px
+    &__link
+        line-height: 40px
+        &_active
+            color: #00aeef
+    &__items
+        flex: 0 1 75%
+    &__item
+        background-color: #f9f9f9
+        padding: 14px 60px 15px 31px
+        position: relative
+        margin-bottom: 15px
+        &::before
+            content: ''
+            display: block
+            width: 15px
+            height: 100%
+            background-color: #00aeef
+            position: absolute
+            top: 0
+            left: 0
+        &::after
+            content: '+'
+            display: block
+            font-size: 50px
+            color: #fff
+            width: 55px
+            height: 100%
+            background: $gradient
+            position: absolute
+            padding: 14px
+            top: 0
+            right: 0
+        &_active
+            &::after
+                padding: 9px 20px
+                content: '-'
