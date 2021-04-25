@@ -55,3 +55,48 @@
     &__content
         @include phones
             flex-direction: column
+
+.sub
+    &__container
+        @include xsphones
+            padding: 50px
+    &__phone
+        @include laptop
+            display: none
+    &__content
+        @include laptop
+            margin-right: 0
+    &__container, &__clients
+        @include laptop
+            justify-content: space-evenly
+    &__clients
+        @include xsphones
+            margin-top: 45px
+    &__client
+        @include laptop
+            flex: 0 0 40%
+            margin-bottom: 15px
+            text-align: start
+            &:nth-child(2n+1)
+                text-align: end
+    &__form
+        @include xsphones
+            flex-direction: column
+            input
+                flex: 0 0 90%
+                margin-bottom: 10px
+            input, button
+                border-radius: 5px
+
+.footer
+    &__item
+        @include laptop
+            flex: 0 0 33%
+        @include smtablets
+            flex: 0 0 40%
+        @include xsphones
+            flex: 0 0 100%
+            text-align: center
+    &__socials
+        @include xsphones
+            margin: 20px auto
