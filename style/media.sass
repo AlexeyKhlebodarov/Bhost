@@ -1,5 +1,103 @@
 @import "mixins.sass"
 
+.header
+    &__items
+        @include tablets
+            width: 90%
+    &__content
+        @include tablets
+            margin: 25% 0
+    .nav
+        &__main
+            @include smtablets
+                flex-direction: column
+                img
+                    margin: 30px 0
+    &__arrows
+        @include tablets
+            top: 90%
+            right: 50%
+            transform: translateX(50%)
+            i
+                display: inline-block
+    &__socials
+        @include tablets
+            width: 150px
+            height: 15px
+            top: 120%
+            left: 50%
+            transform: translateX(-50%)
+            flex-direction: row
+            align-items: center
+        @include phones
+            top: 18%
+
+.about
+    &__inner
+        @include laptop
+            flex-direction: column-reverse
+            text-align: center
+            justify-content: center
+            max-width: 80vw
+            margin: 0 auto
+            img
+                margin-bottom: 30px
+    &__content
+        @include laptop
+            margin-right: 0
+    &__items
+        @include phones
+            justify-content: center
+    &__item
+        @include laptop
+            align-items: start
+        @include phones
+            flex: 0 0 70%
+        @include xsphones
+            flex: 0 0 100%
+
+.howToBuild
+    &__step
+        @include tablets
+            flex: 0 0 45%
+            margin-bottom: 15px
+        @include xsphones
+            flex: 0 0 90%
+
+.domain
+    button
+        @include phones
+            display: none
+
+.service
+    &__item
+        @include tablets
+            flex: 0 1 48%
+            padding: 20px
+            margin-bottom: 20px
+            border: 1px dashed #31aae2
+        @include phones
+            flex: 0 0 100%
+
+.price
+    &__slider-inner
+        @include laptop
+            flex-direction: column-reverse
+    &__slider-content
+        @include laptop
+            max-width: 95%
+            text-align: center
+            margin-right: 0
+            i
+                text-align: start
+        @include phones
+            img
+                float: none
+                margin: 0 0 20px 0
+    &__slider-nav
+        @include laptop
+            margin: 0 auto
+
 .builder
     @include tablets
         flex-direction: column

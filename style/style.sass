@@ -11,11 +11,6 @@ body
     line-height: 27px
     color: #616161
 
-hr
-    background-color: rgba(255, 255, 255, 0.3)
-    height: 1px
-    border: none
-
 img
     max-width: 100%
     max-height: 100%
@@ -29,23 +24,25 @@ img
     &_Y
         padding: 120px 15px
 
+//HEADER>>>
+
 .header
-    width: 100%
-    height: 100vh
+    padding-bottom: 150px
     color: #fff
     background: #a343bf url(../images/intro.png) center/cover fixed
     text-align: center
-    .container
-        padding: 0
-    &__arrow
+    position: relative
+    hr
+        background-color: rgba(255, 255, 255, 0.3)
+        height: 1px
+    &__arrows
         position: absolute
-        top: 52%
+        top: calc(40% + 80 * (100vw / 1170))
         right: 10%
         i
             display: block
             border-radius: 3px
             background-color: rgba(0, 0, 0, 0.2)
-            position: relative
             margin-bottom: 1px
             padding: 17px 20px
             cursor: pointer
@@ -53,12 +50,12 @@ img
                 color: #00aeef
                 background-color: rgba(0, 0, 0, 0.1)
     &__content
-        margin: 25vh 0 50vh 0
+        margin: 20% 0
+        position: relative
         h1
-            line-height: 60px
-            font-size: 42px
+            font-size: calc(20px + 15 * (100vw / 1170))
             font-weight: bold
-            color: white
+            margin-bottom: 45px
         button
             background-color: #00aeef
             border-radius: 3px
@@ -67,24 +64,32 @@ img
             font-weight: 600
             margin-top: 45px
     &__items
+        width: 50%
+        margin: 0 auto
         position: relative
         font-weight: 900
         font-size: 12px
         letter-spacing: 0.1rem
         line-height: 1.3rem
         display: flex
-        justify-content: center
+        justify-content: space-between
+        flex-wrap: wrap
     &__item
-        flex: 0 0 18%
+        flex: 0 0 30%
+        p
+            margin-top: 15px
     &__socials
-        height: 100%
+        height: 130px
         position: absolute
-        left: 0
-        display: inherit
+        top: 50%
+        transform: translateY(-50%)
+        left: 30px
+        display: flex
         flex-direction: column
-        justify-content: space-around
+        justify-content: space-between
         align-items: start
     .nav
+        margin: 0 30px
         &__top
             display: flex
             justify-content: space-between
@@ -92,6 +97,10 @@ img
             padding: 11px 0 13px 0
             img
                 cursor: pointer
+        &__acc
+            img
+                margin-left: 10px
+                margin-top: 5px
         &__main
             padding-top: 16px
             display: flex
@@ -99,75 +108,104 @@ img
             align-items: center
         &__link
             margin-left: 2vw
-            font-weight: 14px
+        &__contacts
+            i
+                &:nth-of-type(2)
+                    margin: 0 3vw 0 2.5vw
         &__contact
             font-size: 12px
-            font-family: "Open Sans", sans-serif
-            font-weight: 400
+            font-family: 'Open Sans'
+            font-weight: 600
+
+//ABOUT>>>
 
 .about
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: center
     &__content
-        max-width: 540px
+        flex: 0 0 47%
+        margin-right: 30px
         h3
             color: #333333
+            font-size: 24px
             font-weight: 600
+            margin-bottom: 25px
     &__items
         display: flex
         flex-direction: row
         justify-content: space-between
         flex-wrap: wrap
+        margin-top: 15px
     &__item
-        flex: 0 0 50%
-        display: flex
+        flex: 0 0 48%
+        display: inherit
         align-items: center
         margin-top: 30px
     &__item-content
         h4, p
-            margin: 0 0 0 15px
+            margin-left: 15px
             text-align: center
+            font-weight: 600
+        h4
+            color: #333333
+            font-size: calc(12px + 4 * (100vw / 1170))
+            font-weight: 700
+
+//DOMAIN>>>
 
 .domain
     text-align: center
     color: #fff
     width: 100%
-    height: 466px
+    height: 480px
     background: url("../images/domain.jpg") 0 0 fixed
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
     h2
-        font-weight: bold
-        color: white
+        font-size: 30px
+        font-weight: 700
+        line-height: 40px
+        width: 80vw
+        max-width: 420px
+    p
+        margin: 28px 0 15px 0
     form
         position: relative
-        margin: 0 auto
-        max-width: 570px
+        max-width: 550px
+        width: 80vw
     input[type="text"]
-        width: 510px
-        height: 60px
-        padding-left: 60px
+        padding: 15px 0 18px calc(30px + 10 * (100vw / 1170))
+        width: 100%
         border: 2px solid $blue
         border-radius: 50px
-        outline: none
         color: $gray
-        line-height: 24px
-        font-family: "Open Sans", sans-serif
-        margin: 50px 0 34px 0
+        margin: 30px 0
     i
         position: absolute
-        top: 43%
-        left: 30px
+        top: 50%
+        transform: translateY(-50%)
+        left: calc(10px + 10 * (100vw / 1170))
         color: #909090
     button
         position: absolute
-        top: 35%
+        top: 50%
+        transform: translateY(-50%)
         right: 7px
         width: 130px
-        height: 45px
+        padding: 12px 0
         background: $gradient
         border-radius: 30px
         font-weight: 600
+    &__checks
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
     input[type="checkbox"]
         display: none
         &+label
@@ -183,39 +221,60 @@ img
                 top: 2px
                 cursor: pointer
 
+//HOWTOBUILD>>>
+
 .howToBuild
     text-align: center
     &__intro
-        max-width: 40vw
-        margin: 0 auto 70px auto
+        width: 80vw
+        max-width: 680px
+        margin: 0 auto 70px
+        h2
+            color: #333333
+            font-size: 30px
+            font-weight: 600
+            line-height: 40px
+            letter-spacing: 0.6px
+            margin-bottom: 20px
     &__steps
         width: 100%
         display: flex
-        justify-content: space-between
+        justify-content: space-evenly
         align-items: center
+        flex-wrap: wrap
     &__step
-        flex: 0 0 22%
+        flex: 0 0 25%
         h3
             margin: 20px 0 15px 0
+            font-size: 24px
             font-weight: 600
+            color: #333333
+
+//SERVICE>>>
 
 .service
     background-color: #f9f9f9
     text-align: center
+    color: #333333
     &__intro
-        max-width: 60vw
+        max-width: 770px
         margin: 0 auto
+        h2
+            font-size: 30px
+            font-weight: 700
+            line-height: 40px
         p
-            max-width: 50vw
-            margin: 0 auto 60px auto
+            max-width: 90%
+            margin: 20px auto 60px
     &__items
         display: flex
         flex-direction: row
         justify-content: space-between
+        flex-wrap: wrap
     &__item
         flex: 0 1 25%
         padding: 0 18px
-        &:not(:last-child)
+        &:nth-child(-n+3)
             border-right: 1px dashed $blue
         i
             background: $gradient
@@ -225,40 +284,65 @@ img
         h4
             font-weight: normal
             margin: 20px 0 10px 0
+            font-size: 18px
+            font-weight: 700
+            letter-spacing: 0.36px
+
+//PRICE>>>
 
 .price
+    position: relative
     &__slider-arrows
         i
             position: absolute
-            top: 50%
+            top: 60%
             transform: translateY(-50%)
             &:first-child
-                left: -80px
+                left: 5%
             &:last-child
-                right: -80px
+                right: 5%
     &__intro
-        margin: 0 auto
+        margin: 0 auto 70px
         text-align: center
         max-width: 58%
+        h3
+            color: #333333
+            font-size: 30px
+            font-weight: 600
+            margin-bottom: 20px
     &__slider
-        border: 1px solid black
-        position: relative
+        max-width: 75vw
+        margin: 0 auto
     &__slider-content
         max-width: 50%
+        margin-right: 20px
+        h4
+            color: #333333
+            font-size: 24px
+            font-weight: 600
+            margin-bottom: 25px
         img
             float: left
+            margin-right: 4vw
+        p
+            margin-top: 20px
     &__slider-inner
         display: flex
         flex-direction: row
         justify-content: space-between
         align-items: center
     &__check
-        max-width: 50%
+        height: 110px
         display: flex
         flex-direction: row
-        justify-content: space-evenly
-        align-items: center
+        justify-content: space-between
         flex-wrap: wrap
+        span
+            font-family: 'Open Sans', sans-serif
+            font-weight: normal
+            line-height: 20px
+        i
+            flex: 0 0 48%
     &__button
         color: $blue
         background-color: transparent
@@ -266,6 +350,7 @@ img
         border-radius: 5px
         padding: 16px 25px
         font-size: 20px
+        margin: 40px 0 60px 0
     &__slider-nav
         display: flex
         flex-direction: row
@@ -365,48 +450,6 @@ img
         font-size: calc(30px + 5 * (100vw / 1170))
     &__text
         font-size: calc(15px + 4 * (100vw / 1170))
-
-//CLIENTS>>>
-
-.clients
-    text-align: center
-    &__header
-        color: #333
-        font-size: 30px
-        margin-bottom: 75px
-        font-weight: 600
-    &__carousel
-        // position: relative
-        height: 360px
-        width: 100%
-        background: url(../images/clients.png) center/cover fixed
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        align-items: center
-        flex-wrap: wrap
-        p
-            max-width: 60%
-        img
-            &:first-child
-                align-self: flex-end
-    &__carousel-dots
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        align-items: center
-        max-width: 82px
-        margin: 0 auto
-    &__carousel-dot
-        display: inline-block
-        width: 14px
-        height: 14px
-        border: 1px dotted black
-        border-radius: 10px
-        &_active
-            background-image: $gradient
-            width: 20px
-            height: 20px
 
 //BLOG>>>
 
