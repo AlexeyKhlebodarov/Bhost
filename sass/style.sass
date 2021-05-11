@@ -15,7 +15,7 @@ img
     max-width: 100%
     max-height: 100%
     object-fit: cover
-    object-position: 0 0
+    object-position: center
 
 .container
     max-width: 1200px
@@ -27,7 +27,8 @@ img
 //HEADER>>>
 
 .header
-    padding-bottom: 150px
+    max-height: 100%
+    padding-bottom: 50px
     color: #fff
     background: #a343bf url(../images/intro.png) center/cover fixed
     text-align: center
@@ -37,8 +38,9 @@ img
         height: 1px
     &__arrows
         position: absolute
-        top: calc(40% + 80 * (100vw / 1170))
+        top: 48%
         right: 10%
+        z-index: 15
         i
             display: block
             border-radius: 3px
@@ -50,7 +52,7 @@ img
                 color: #00aeef
                 background-color: rgba(0, 0, 0, 0.1)
     &__content
-        margin: 20% 0
+        margin: 15% 0
         position: relative
         h1
             font-size: calc(20px + 15 * (100vw / 1170))
@@ -59,23 +61,31 @@ img
         button
             background-color: #00aeef
             border-radius: 3px
-            padding: 19px 22px
+            padding: 15px 22px
             font-size: 13px
             font-weight: 600
             margin-top: 45px
+        .slider
+            max-width: 510px
+            max-height: 154px
+            overflow: hidden
+            margin: 0 auto
+            &-inner
+                display: flex
+                position: relative
+                left: 0
+                top: 0
+                transition: all ease 1s
+                &__item
+                    margin: auto 0
+                    text-align: center
     &__items
-        width: 50%
-        margin: 0 auto
         position: relative
         font-weight: 900
         font-size: 12px
         letter-spacing: 0.1rem
         line-height: 1.3rem
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
     &__item
-        flex: 0 0 30%
         p
             margin-top: 15px
     &__socials
@@ -116,6 +126,77 @@ img
             font-size: 12px
             font-family: 'Open Sans'
             font-weight: 600
+        .burgerMenu
+            display: none
+            position: relative
+            top: 10px
+            left: 20px
+            &-button
+                width: 30px
+                height: 30px
+                border-radius: 5px
+                background-color: rgba(0, 0, 0, 0.5)
+                z-index: 10
+                cursor: pointer
+                position: relative
+                span, span::before, span::after
+                    position: absolute
+                    height: 2px
+                    width: 20px
+                    background-color: #fff
+                    left: 0
+                span
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    &::before
+                        content: ""
+                        top: -8px
+                        border-radius: 5px 5px 0 0
+                    &::after
+                        content: ""
+                        top: 8px
+                        border-radius: 0 0 5px 5px
+            &-nav
+                min-width: 240px
+                min-height: 100px
+                display: none
+                position: absolute
+                top: 30px
+                right: 0
+                border-radius: 5px
+                z-index: 10
+                padding: 5px 10px 10px 10px
+                background: rgba(0, 0, 0, 0.5)
+                backdrop-filter: blur(10px)
+                border-top-right-radius: 0
+                i, img
+                    width: 30px
+                    height: 30px
+                    padding: 6px
+                    border: 1px dashed #fff
+                    border-radius: 15px
+                    margin: 4px
+                    cursor: pointer
+                &__icons, &__links
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    flex-direction: row
+                    justify-content: center
+                    align-items: space-between
+                &__link
+                    font-weight: 700
+                    margin: 4px
+            &_active
+                .burgerMenu
+                    &-button
+                        border-radius: 5px 5px 0 0
+                    &-nav
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-evenly
+                        align-items: center
 
 //ABOUT>>>
 
@@ -208,6 +289,8 @@ img
         flex-wrap: wrap
     input[type="checkbox"]
         display: none
+        &:checked+label::before
+            background-color: $blue
         &+label
             margin: 25px
             &::before

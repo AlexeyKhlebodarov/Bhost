@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/reset.min.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/media.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>Bhost</title>
 </head>
 
@@ -52,6 +52,31 @@
                         <a href="#" class="nav__link">PRICING</a>
                         <a href="#" class="nav__link">CONTACT</a>
                     </div>
+                    <div class="burgerMenu">
+                        <div class="burgerMenu-button">
+                            <span></span>
+                        </div>
+                        <div class="burgerMenu-nav">
+                            <div class="burgerMenu-nav__links">
+                                <a href="#" class="burgerMenu-nav__link">HOME</a>
+                                <a href="#hosting" class="burgerMenu-nav__link">HOSTING</a>
+                                <a href="#service" class="burgerMenu-nav__link">SERVICES</a>
+                                <a href="#price" class="burgerMenu-nav__link">PRICING</a>
+                                <a href="#contact" class="burgerMenu-nav__link">CONTACT</a>
+                            </div>
+                            <div class="burgerMenu-nav__icons">
+                                <i class="fas fa-comment-dots"></i>
+                                <i class="fas fa-phone-alt"></i>
+                                <i class="far fa-envelope"></i>
+                                <img src="images/cart.png" alt="cart">
+                                <img src="images/login.png" alt="login">
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-linkedin-in"></i>
+                                <i class="fab fa-skype"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
             <div class="header__content">
@@ -62,18 +87,44 @@
                     <i class="fab fa-skype"></i>
                 </div>
                 <h1>BUILD YOUR WEB SITE WITH BHOST</h1>
-                <div class="header__items">
-                    <div class="header__item">
-                        <img src="images/icon1.png" alt="feature">
-                        <p>SAVE MONEY <br> MORE THEN 40%</p>
-                    </div>
-                    <div class="header__item">
-                        <img src="images/icon2.png" alt="feature">
-                        <p>STARTING AT <br> $1.45/year</p>
-                    </div>
-                    <div class="header__item">
-                        <img src="images/icon3.png" alt="feature">
-                        <p>SUPPORT <br> 24/7 DAYS</p>
+                <div class="slider">
+                    <div class="header__items slider-inner">
+                        <div class="header__item slider-inner__item">
+                            <img src="images/icon1.png" alt="feature">
+                            <p>SAVE MONEY <br> MORE THEN 40%</p>
+                        </div>
+                        <div class="header__item slider-inner__item">
+                            <img src="images/icon2.png" alt="feature">
+                            <p>STARTING AT <br> $1.45/year</p>
+                        </div>
+                        <div class="header__item slider-inner__item">
+                            <img src="images/icon3.png" alt="feature">
+                            <p>SUPPORT <br> 24/7 DAYS</p>
+                        </div>
+                        <div class="header__item slider-inner__item">
+                            <img src="images/icon1.png" alt="feature">
+                            <p>SAVE MONEY <br> MORE THEN 40%</p>
+                        </div>
+                        <div class="header__item slider-inner__item">
+                            <img src="images/icon2.png" alt="feature">
+                            <p>STARTING AT <br> $1.45/year</p>
+                        </div>
+                        <div class="header__item slider-inner__item">
+                            <img src="images/icon3.png" alt="feature">
+                            <p>SUPPORT <br> 24/7 DAYS</p>
+                        </div>
+                        <div class="header__item slider-inner__item">
+                            <img src="images/icon1.png" alt="feature">
+                            <p>SAVE MONEY <br> MORE THEN 40%</p>
+                        </div>
+                        <div class="header__item slider-inner__item">
+                            <img src="images/icon2.png" alt="feature">
+                            <p>STARTING AT <br> $1.45/year</p>
+                        </div>
+                        <div class="header__item slider-inner__item">
+                            <img src="images/icon3.png" alt="feature">
+                            <p>SUPPORT <br> 24/7 DAYS</p>
+                        </div>
                     </div>
                 </div>
                 <button>GET STARTED</button>
@@ -129,7 +180,7 @@
             </div>
         </div>
     </section>
-    <section class="domain">
+    <section class="domain" id="hosting">
         <h2>FIND YOUR DOMAIN NAME</h2>
         <p>Starting From $1.75 Per Year!</p>
         <form action="#">
@@ -173,7 +224,7 @@
             </div>
         </div>
     </section>
-    <section class="service">
+    <section class="service" id="service">
         <div class="container container_Y ">
             <div class="service__intro">
                 <h2>WHAT MAKES OUR WORDPRESS HOSTING THE BEST?</h2>
@@ -208,7 +259,7 @@
             </div>
         </div>
     </section>
-    <section class="price">
+    <section class="price" id="price">
         <div class="container container_Y">
             <div class="price__intro">
                 <h3>CHOOSE YOUR PACKAGE</h3>
@@ -219,6 +270,78 @@
                 <div class="price__slider-arrows">
                     <i class="fas fa-long-arrow-alt-left"></i>
                     <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+                <div class="price__slider-inner">
+                    <div class="price__slider-content">
+                        <h4>STARTUP HOSTING PACKAGE</h4>
+                        <img src="images/price.png" alt="pricecloud">
+                        <div class="price__check">
+                            <i class="fas fa-check">
+                                <span>1 Website</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>100 GB Storage</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>Unlimited Bandwidth</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>For up to 10 Users</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>Free Domain</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>Free Domain</span>
+                            </i>
+                        </div>
+                        <p>Find the Perfect Hosting Package for You,
+                            Get the Best WEb Hosting Deals Today! Bhost is one of the best web hosting services. Join
+                            world
+                            best
+                            hosting Bhost now and get a free domain name!
+                        </p>
+                        <button class="price__button">GET STARTED</button>
+                    </div>
+                    <div class="price__slider-pic">
+                        <img src="images/pricedevices.png" alt="pricedevices">
+                    </div>
+                </div>
+                <div class="price__slider-inner">
+                    <div class="price__slider-content">
+                        <h4>STARTUP HOSTING PACKAGE</h4>
+                        <img src="images/price.png" alt="pricecloud">
+                        <div class="price__check">
+                            <i class="fas fa-check">
+                                <span>1 Website</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>100 GB Storage</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>Unlimited Bandwidth</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>For up to 10 Users</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>Free Domain</span>
+                            </i>
+                            <i class="fas fa-check">
+                                <span>Free Domain</span>
+                            </i>
+                        </div>
+                        <p>Find the Perfect Hosting Package for You,
+                            Get the Best WEb Hosting Deals Today! Bhost is one of the best web hosting services. Join
+                            world
+                            best
+                            hosting Bhost now and get a free domain name!
+                        </p>
+                        <button class="price__button">GET STARTED</button>
+                    </div>
+                    <div class="price__slider-pic">
+                        <img src="images/pricedevices.png" alt="pricedevices">
+                    </div>
                 </div>
                 <div class="price__slider-inner">
                     <div class="price__slider-content">
@@ -440,7 +563,7 @@
         </div>
     </section>
 
-    <section class="sub">
+    <section class="sub" id="contact">
         <div class="sub__container container_Y container">
             <div class="sub__content">
                 <div class="sub__main">
@@ -552,6 +675,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/135cfc8609.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

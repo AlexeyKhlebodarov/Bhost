@@ -1,36 +1,28 @@
 @import "mixins.sass"
 
 .header
-    &__items
-        @include tablets
+    @include tablets
+        &__items
             width: 90%
-    &__content
-        @include tablets
-            margin: 25% 0
-    .nav
-        &__main
-            @include smtablets
-                flex-direction: column
-                img
-                    margin: 30px 0
-    &__arrows
-        @include tablets
-            top: 90%
+        .nav
+            &__top, &__links, hr
+                display: none
+            .burgerMenu
+                display: block
+                @include xsphones
+                    &-nav
+                        &__links
+                            flex-direction: column
+                        &__icons
+                            flex-wrap: wrap
+        &__arrows
+            top: 87.5%
             right: 50%
             transform: translateX(50%)
             i
                 display: inline-block
-    &__socials
-        @include tablets
-            width: 150px
-            height: 15px
-            top: 120%
-            left: 50%
-            transform: translateX(-50%)
-            flex-direction: row
-            align-items: center
-        @include phones
-            top: 18%
+        &__socials
+            display: none
 
 .about
     &__inner
