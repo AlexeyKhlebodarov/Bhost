@@ -377,13 +377,18 @@ img
     position: relative
     &__slider-arrows
         i
+            cursor: pointer
+            font-size: 20px
             position: absolute
             top: 60%
             transform: translateY(-50%)
+            z-index: 15
             &:first-child
                 left: 5%
             &:last-child
                 right: 5%
+            &:hover
+                color: $blue
     &__intro
         margin: 0 auto 70px
         text-align: center
@@ -394,8 +399,15 @@ img
             font-weight: 600
             margin-bottom: 20px
     &__slider
-        max-width: 75vw
+        max-width: 80vw
         margin: 0 auto
+        overflow: hidden
+        &-inner
+            display: flex
+            position: relative
+            left: 0
+            top: 0
+            transition: all ease 1s
     &__slider-content
         max-width: 50%
         margin-right: 20px
@@ -409,11 +421,11 @@ img
             margin-right: 4vw
         p
             margin-top: 20px
-    &__slider-inner
+    &__slider-item
         display: flex
         flex-direction: row
         justify-content: space-between
-        align-items: center
+        margin: auto 0
     &__check
         height: 110px
         display: flex
@@ -444,7 +456,8 @@ img
         width: 14px
         height: 14px
         border: 2px solid $blue
-        cursor: pointer
+        &:first-child
+            background-color: $blue
 
 //BUILDER>>>
 
@@ -479,36 +492,36 @@ img
         font-size: 30px
         font-weight: 700
         line-height: 34px
-    &__tabs
+    &-tabs
         margin: 74px auto 50px
         display: flex
         flex-direction: row
         justify-content: space-between
         flex-wrap: wrap
-    &__tabs-item
-        cursor: pointer
-        display: inline-block
-        height: 60px
-        flex: 0 1 16.5%
-        background-color: #f9f9f9
-        border-radius: 2px
-        cursor: pointer
-        text-align: center
-        font-weight: 600
-        padding: 16px 0
-        &_active
-            background: $gradient
-            color: white
-    &__tabs-content
-        h4
-            font-size: 20px
+        &__item
+            cursor: pointer
+            display: inline-block
+            height: 60px
+            flex: 0 1 16.5%
+            background-color: #f9f9f9
+            border-radius: 2px
+            cursor: pointer
+            text-align: center
             font-weight: 600
-        p
-            margin-top: 22px
-        img
-            float: right
-            padding: 50px
-
+            padding: 16px 0
+            &_active
+                background: $gradient
+                color: white
+        &__content
+            display: none
+            h4
+                font-size: 20px
+                font-weight: 600
+            p
+                margin-top: 22px
+            img
+                float: right
+                padding: 50px
 //STAT>>>
 
 .stat
@@ -628,38 +641,58 @@ img
         line-height: 40px
         &_active
             color: #00aeef
-    &__items
-        flex: 0 1 75%
-    &__item
-        background-color: #f9f9f9
-        padding: 14px 60px 15px 31px
-        position: relative
-        margin-bottom: 15px
-        &::before
-            content: ''
-            display: block
-            width: 15px
-            height: 100%
-            background-color: #00aeef
-            position: absolute
-            top: 0
-            left: 0
-        &::after
-            content: '+'
-            display: block
-            font-size: 50px
-            color: #fff
-            width: 55px
-            height: 100%
-            background: $gradient
-            position: absolute
-            padding: 14px
-            top: 0
-            right: 0
-        &_active
+    &-items
+        &__content
+            padding: 0 18px
+            background-color: white
+            overflow: hidden
+            max-height: 0
+            transition: 0.5s ease-out
+            margin-bottom: 18px
+            background-color: #f9f9f9
+            border: none
+            p
+                padding-top: 18px
+            &_active
+                border: 1px solid
+                border-image: $gradient
+                border-image-slice: 1
+        &__button
+            min-height: 55px
+            width: 100%
+            background-color: #f9f9f9
+            padding: 10px 60px 10px 20px
+            position: relative
+            text-align: start
+            curson: pointer
+            transition: 0.5s
+            &::before
+                content: ''
+                display: block
+                width: 15px
+                height: 100%
+                background-color: #00aeef
+                position: absolute
+                top: 0
+                left: 0
             &::after
-                padding: 9px 20px
-                content: '-'
+                content: '\02795'
+                display: block
+                font-size: 20px
+                font-weight: 900
+                color: #fff
+                width: 55px
+                height: 100%
+                background: $gradient
+                position: absolute
+                top: 0
+                right: 0
+                display: flex
+                justify-content: center
+                align-items: center
+            &_active
+                &::after
+                    content: '\2796'
 
 //SUB>>>
 
